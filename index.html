@@ -892,8 +892,18 @@
 
   <body>
 
+          <!--
     <amp-state id="divisa"
        src="https://www.alectrico.cl/api/v1/electrico/circuitos/divisas.json?amp_cliente_id=CLIENT_ID(uid)&_=RANDOM"   >
+    </amp-state>
+          -->
+   <amp-state id="divisa">
+     <script type="application/json">
+        {
+         "mlc": "0",
+         "dolar": "0"
+        }
+      </script>
     </amp-state>
 
 
@@ -1118,7 +1128,7 @@
 
     <section amp-access="NOT loggedIn">
       <template amp-access-template type="amp-mustache">
-        <div class="ampstart-headerbar flex fixed justify-start items-center top-0">
+        <div class="ampstart-headerbar flex fixed justify-start items-center top-1">
 	  <div flex="1 1 auto">
 	    <amp-base-carousel width="110"  on="slideChange:AMP.setState({ divisa: {mlc: '{{mlc}}'}, selectedCentenaSlide: event.index})"  height="90" layout="fixed" horizontal=false >
                <amp-img src="./img/fidget.png" width="120" height="90" alt="100 mlc"></amp-img>
