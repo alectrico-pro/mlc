@@ -1,0 +1,18 @@
+#https://tasas.eltoque.com/docs/
+#es un request para cambio de divisas 
+#estado de la transaccion
+token=ENV['ELTOQUE_API_KEY']
+
+echo ""
+echo "----- CREA  ----------------------------"
+echo ""
+#date_from=2024-07-30%2008%3A56%3A08&date_to=2024-07-31%2008%3A56%3A08
+#date_from=2022-10-27%2000%3A00%3A01&date_to=2022-10-27%2023%3A59%3A01
+#UG -- : ETHON: performed EASY effective_url=https://tasas.eltoque.com/v1/trmi?date_from=2024-07-30 07:47&date_to=2024-07-31 0747 response_code=400 return_code=ok total_time=0.358363
+#
+curl -X 'GET' \
+  'https://tasas.eltoque.com/v1/trmi?date_from=2024-07-30%2008%3A56%3A08&date_to=2024-07-31%2008%3A56%3A01' \
+  -H 'accept: */*' \
+  -H "Authorization: Bearer $token"
+
+
