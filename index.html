@@ -1196,6 +1196,7 @@
                   layout="responsive"
                   type="slides"
                   slide=0
+		  hidden
                   [slide]="product.selectedSlideForCielo"
                   on="slideChange: AMP.setState({product: {selectedSlide: event.index, selectedSlideForCielo: event.index}})"
                   class="fadeIn"
