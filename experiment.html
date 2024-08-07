@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8" />
+    <title>My AMP Page</title>
+    <link rel="canonical" href="self.html" />
+    <meta name="viewport" content="width=device-width" />
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+    <style amp-custom>
+      h1 {
+        margin: 1rem;
+      }
+    </style>
+    <meta name="amp-script-src" content="sha384-PL0iazy-mDITGBzff2lQM53EM_Y6_Z9ec8QQr_Sag63n9phtd_V_ies_KL7O73wy ">
+  </head>
+  <body>
+    <h1>Hello AMPHTML World!</h1>
+    
+  <script id="local-storage-script" type="text/plain" target="amp-script">
+  const submit = document.getElementById('username-submit');
+  const input = document.getElementById('username-input');
+  const display = document.getElementById('username-display');
+
+  const oldUsername = localStorage.getItem('username');
+  display.textContent = oldUsername ? oldUsername : '(not set)';
+
+  function setUsername() {
+    const newUsername = input.value;
+    localStorage.setItem('username', newUsername);
+    display.textContent = newUsername;
+  }
+
+  submit.addEventListener('click', setUsername);
+</script>
+
+
+
+
+    <amp-script layout="fixed-height" script="local-storage-script" height="110" class="sample">
+  <div>
+    <span>Current username: </span>
+    <b id="username-display"></b>
+  </div>
+  <div>
+    <label>Enter new username:</label>
+    <input id="username-input" type="text" maxlength="20">
+  </div>
+  <button id="username-submit">Submit</button>
+</amp-script>
+
+  </body>
+</html>
+
