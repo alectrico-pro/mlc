@@ -222,7 +222,7 @@
     <section amp-access="NOT loggedIn">
       <template amp-access-template type="amp-mustache">
         <div class="ampstart-headerbar flex fixed justify-start items-center top-1">
-          <div flex="1 1 auto">
+          <div >
             <amp-base-carousel width="110"  on="slideChange:AMP.setState({ divisa: {mlc: '{{mlc}}'}, selectedCentenaSlide: event.index})"  height="90" layout="fixed" horizontal=false >
                <amp-img src="./img/fidget.png" width="120" height="90" alt="100 mlc"></amp-img>
                <amp-img src="./img/fidget.png" width="120" height="90" alt="200 mlc"></amp-img>
@@ -248,7 +248,7 @@
              </amp-base-carousel>
           </div>
 
-          <div flex="1 1 auto">
+          <div >
             <amp-base-carousel width="110"  on="slideChange:AMP.setState({ divisa: {dolar: '{{dolar}}'}, selectedDecenaSlide: event.index})"  height="90" layout="fixed" horizontal=false >
                <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
                <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
@@ -264,7 +264,7 @@
              </amp-base-carousel>
           </div>
 
-          <div flex="1 1 auto">
+          <div >
             <amp-base-carousel width="110" height="90" layout="fixed" horizontal=false  on="slideChange:AMP.setState({ divisa: {dolar: '{{dolar}}'}, selectedUnidadSlide: event.index })" >
                <amp-img src="./img/fidget.png" width="400" height="300" alt="Ningún mlc"></amp-img>
                <amp-img src="./img/fidget.png" width="400" height="300" alt="Un mlc"></amp-img>
