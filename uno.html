@@ -911,6 +911,20 @@
 
   <body>
 
+
+<amp-script layout="fixed-height" script="local-storage-script" height="110" class="sample">
+  <div>
+    <span>Current username: </span>
+    <b id="username-display"></b>
+  </div>
+  <div>
+    <label>Enter new username:</label>
+    <input id="username-input" type="text" maxlength="20">
+  </div>
+  <button id="username-submit">Submit</button>
+</amp-script>
+
+
     <!--
     <amp-state
        id = "remoto"
@@ -1154,30 +1168,11 @@
 	-->
         <h4 class="m1">Valor de un MLC. Refresque si no aparece un valor o si quiere actualizarlo!</h3>
 
-
-
-
-    <amp-script layout="fixed-height" script="local-storage-script" height="110" class="sample">
-  <div>
-    <span>Current username: </span>
-    <b id="username-display"></b>
-  </div>
-  <div>
-    <label>Enter new username:</label>
-    <input id="username-input" type="text" maxlength="20">
-  </div>
-  <button id="username-submit">Submit</button>
-</amp-script>
-
-
-
         <div class="m1">
           <amp-social-share type="facebook" width="30" height="22" data-param-app_id="860581905818440"></amp-social-share>
           <amp-social-share type="email" width="30" height="22"></amp-social-share>
           <amp-social-share type="pinterest" width="33" height="22"></amp-social-share>
         </div>
-
-
 
 	<h1> <span [text]="+selectedUnidadSlide + selectedDecenaSlide * 10 + selectedCentenaSlide * 100 ">MLC |
              </span>
