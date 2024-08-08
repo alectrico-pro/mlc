@@ -860,7 +860,7 @@
 
 
 
-       <div id="abe-preview">
+    <div id="abe-preview">
       <div class="ampstart-card m1">
         <div class="header">
           <a id="sample-menu" on="tap:drawermenu.toggle">
@@ -875,94 +875,6 @@
         <h2 class="m1">Santa.Capital</h2>
         <h3 class="m1">Ventas sin Complejos!</h3>
         -->
-        <h4 class="m1">Valor de un MLC. Refresque si no aparece un valor o si quiere actualizarlo!</h3>
-
-
-
-        <div class="m1">
-          <amp-social-share type="facebook" width="30" height="22" data-param-app_id="860581905818440"></amp-social-share>
-          <amp-social-share type="email" width="30" height="22"></amp-social-share>
-          <amp-social-share type="pinterest" width="33" height="22"></amp-social-share>
-        </div>
-
-
-
-        <h1> <span [text]="+selectedUnidadSlide + selectedDecenaSlide * 10 + selectedCentenaSlide * 100 ">MLC |
-             </span>
-        <span [text]="(+selectedUnidadSlide + selectedDecenaSlide * 10 + selectedCentenaSlide * 100) * divisa.mlc ">
-             </span><span>CUP</h1>
-
-        <p [text]=divisa.mlc></p>
-
-
-	   <section amp-access="NOT loggedIn">
-      <template amp-access-template type="amp-mustache">
-        <div class="ampstart-headerbar flex fixed justify-start items-center top-1">
-          <div >
-            <amp-base-carousel width="110"  on="slideChange:AMP.setState({ divisa: {mlc: '{{mlc}}'}, selectedCentenaSlide: event.index})"  height="90" layout="fixed" horizontal=false >
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="100 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="200 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="300 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="400 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="500 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="600 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="700 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="800 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="900 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="1000 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt="11000 mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-            <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-
-             </amp-base-carousel>
-          </div>
-
-          <div >
-            <amp-base-carousel width="110"  on="slideChange:AMP.setState({ divisa: {dolar: '{{dolar}}'}, selectedDecenaSlide: event.index})"  height="90" layout="fixed" horizontal=false >
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-               <amp-img src="./img/fidget.png" width="120" height="90" alt=""></amp-img>
-
-             </amp-base-carousel>
-          </div>
-          <div >
-            <amp-base-carousel width="110" height="90" layout="fixed" horizontal=false  on="slideChange:AMP.setState({ divisa: {dolar: '{{dolar}}'}, selectedUnidadSlide: event.index })" >
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Ningún mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Un mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Dos mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Tres mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Cuatro mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Cinco mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Séis mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Siete mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Ocho mlc"></amp-img>
-               <amp-img src="./img/fidget.png" width="400" height="300" alt="Nueve mlc"></amp-img>
-
-             </amp-base-carousel>
-          </div>
-        </div>
-      </template>
-     </section>
-        <amp-install-serviceworker
-          src="/sw.js"
-          data-iframe-src="https://amp_install_serviceworker.html"
-          layout="nodisplay">
-        </amp-install-serviceworker>
-
       </div>
     </div>
   </body>
