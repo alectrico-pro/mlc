@@ -23,6 +23,25 @@
 
     <meta name="amp-script-src"  content="sha384-YCFs8k-ouELcBTgzKzNAujZFxygwiqimSqKK7JqeKaGNflwDxaC3g2toj7s_kxWG" />
 
+  <script id="local-storage-script" type="text/plain" target="amp-script">
+  const submit = document.getElementById('username-submit');
+  const input = document.getElementById('username-input');
+  const display = document.getElementById('username-display');
+
+  const oldUsername = localStorage.getItem('username');
+  display.textContent = oldUsername ? oldUsername : '(not set)';
+
+  function setUsername() {
+    const newUsername = input.value;
+    localStorage.setItem('username', newUsername);
+    display.textContent = newUsername;
+  }
+
+  submit.addEventListener('click', setUsername);
+</script>
+
+
+
     <script id="inicial" type='application/ld+json'>
     { 
      "invisible" : false
@@ -1134,23 +1153,6 @@
         <h3 class="m1">Ventas sin Complejos!</h3>
 	-->
         <h4 class="m1">Valor de un MLC. Refresque si no aparece un valor o si quiere actualizarlo!</h3>
-
-  <script id="local-storage-script" type="text/plain" target="amp-script">
-  const submit = document.getElementById('username-submit');
-  const input = document.getElementById('username-input');
-  const display = document.getElementById('username-display');
-
-  const oldUsername = localStorage.getItem('username');
-  display.textContent = oldUsername ? oldUsername : '(not set)';
-
-  function setUsername() {
-    const newUsername = input.value;
-    localStorage.setItem('username', newUsername);
-    display.textContent = newUsername;
-  }
-
-  submit.addEventListener('click', setUsername);
-</script>
 
 
 
