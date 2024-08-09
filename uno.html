@@ -23,23 +23,44 @@
 
     <meta name="amp-script-src" content="sha384-PL0iazy-mDITGBzff2lQM53EM_Y6_Z9ec8QQr_Sag63n9phtd_V_ies_KL7O73wy">
 
-  <script id="local-storage-script" type="text/plain" target="amp-script">
-  const submit = document.getElementById('username-submit');
-  const input = document.getElementById('username-input');
-  const display = document.getElementById('username-display');
 
-  const oldUsername = localStorage.getItem('username');
-  display.textContent = oldUsername ? oldUsername : '(not set)';
+    <script id="local-storage-script" type="text/plain" target="amp-script">
 
-  function setUsername() {
-    const newUsername = input.value;
-    localStorage.setItem('username', newUsername);
-    display.textContent = newUsername;
-  }
+      const submit = document.getElementById('username-submit');
+      const input = document.getElementById('username-input');
+      const display = document.getElementById('username-display');
 
-  submit.addEventListener('click', setUsername);
-</script>
+      const oldUsername = localStorage.getItem('username');
+      display.textContent = oldUsername ? oldUsername : '(not set)';
 
+      function setUsername() {
+        const newUsername = input.value;
+        localStorage.setItem('username', newUsername);
+        display.textContent = newUsername;
+      }
+
+      submit.addEventListener('click', setUsername);
+    </script>
+
+
+
+    <script id="nombre-storage-script" type="text/plain" target="amp-script">
+
+      const submit  = document.getElementById('nombre-submit');
+      const input   = document.getElementById('nombre-input');
+      const display = document.getElementById('nombre-display');
+
+      const oldUsername   = localStorage.getItem('nombre');
+      display.textContent = oldUsername ? oldUsername : '(no ha sido guardado)';
+
+      function setUsername() {
+        const newUsername = input.value;
+        localStorage.setItem('nombre', newUsername);
+        display.textContent = newUsername;
+      }
+
+      submit.addEventListener('click', setUsername);
+    </script>
 
 
     <script id="inicial" type='application/ld+json'>
@@ -912,17 +933,32 @@
   <body>
 
 
-<amp-script layout="fixed-height" script="local-storage-script" height="110" class="sample">
-  <div>
-    <span>Current username: </span>
-    <b id="username-display"></b>
-  </div>
-  <div>
-    <label>Enter new username:</label>
-    <input id="username-input" type="text" maxlength="20">
-  </div>
-  <button id="username-submit">Submit</button>
-</amp-script>
+	<amp-script layout="fixed-height" script="local-storage-script" height="110" class="sample">
+	  <div>
+	    <span>Current username: </span>
+	    <b id="username-display"></b>
+	  </div>
+	  <div>
+	    <label>Enter new username:</label>
+	    <input id="username-input" type="text" maxlength="20">
+	  </div>
+	  <button id="username-submit">Submit</button>
+	</amp-script>
+
+
+        <amp-script layout="fixed-height" script="nombre-storage-script" height="110" class="sample">
+          <div>
+            <span>Nombre: </span>
+            <b id="nombre-display"></b>
+          </div>
+          <div>
+            <label>Nombre:</label>
+            <input id="nombre-input" type="text" maxlength="20">
+          </div>
+          <button id="nombre-submit">Guardar</button>
+        </amp-script>
+
+
 
 
     <!--
